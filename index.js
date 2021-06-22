@@ -27,7 +27,9 @@ async function findMoviesWithComments(){
             '$exists': true
           }
         }
-      }
+      }, {
+                '$limit': 30
+              }
     ]
     const aggCursor =  Movie.aggregate(pipeline);
 
