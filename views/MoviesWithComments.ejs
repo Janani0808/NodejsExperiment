@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<style>
+    table{border: 1px}
+</style>
+<h1>
+    Movies with Comments
+</h1>
+<table>
+    <% aggCursor.forEach(function (movieListing){ %>
+        <tr>
+            <td><%=movieListing.type%></td>
+        <td><%=movieListing.title%></td>
+        <% movieListing.movie_comments.forEach(data => { %>
+            <td><%=data.name%></td>
+            <td><%=data.text%></td>
+        <%});%>
+    <%});%>
+        </tr>
+</table>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<h1>
+    Movies with Imdb 8 to 10
+</h1>
+<table>
+    
+    <%aggCursor.forEach(function (movieListing){ %>
+        <tr>
+        <td><%=movieListing.title%></td>
+        <td><%=movieListing.imdb.rating%></td>
+    </tr>
+    <%});%>
+
+    </table>
